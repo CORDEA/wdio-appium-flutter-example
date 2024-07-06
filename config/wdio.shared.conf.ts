@@ -10,7 +10,7 @@ export const config: Options.Testrunner = {
     },
   },
   port: 4723,
-  specs: ["./test/specs/**/*.ts"],
+  specs: ["../test/specs/**/*.ts"],
   maxInstances: 1,
   capabilities: [],
   services: ["appium"],

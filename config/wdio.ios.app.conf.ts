@@ -8,6 +8,7 @@ export const config: WebdriverIO.Config = {
       "appium:deviceName": "iPhone 15 Pro Max",
       "appium:platformVersion": "17.5",
       "appium:automationName": "XCUITest",
+      "appium:app": "./example/build/ios/iphonesimulator/Runner.app",
     },
   ],
 };
