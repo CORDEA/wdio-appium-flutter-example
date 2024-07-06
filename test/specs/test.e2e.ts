@@ -1,15 +1,13 @@
-import { expect } from "@wdio/globals";
-import LoginPage from "../pageobjects/login.page.js";
-import SecurePage from "../pageobjects/secure.page.js";
+import HomePage from "../pageobjects/home.page.ts";
 
-describe("My Login application", () => {
+describe("My application", () => {
   it("should login with valid credentials", async () => {
-    await LoginPage.open();
-
-    await LoginPage.login("tomsmith", "SuperSecretPassword!");
-    await expect(SecurePage.flashAlert).toBeExisting();
-    await expect(SecurePage.flashAlert).toHaveTextContaining(
-      "You logged into a secure area!",
-    );
+    await expect(HomePage.example1).toBeDisplayed();
+    await expect(HomePage.example2).toBeDisplayed();
+    await expect(HomePage.example3).toBeDisplayed();
+    await expect(HomePage.example4).toBeDisplayed();
+    await expect(HomePage.example5).toBeDisplayed();
+    await HomePage.example6.waitForDisplayed({ reverse: true });
+    await expect(HomePage.example6).toBeEnabled();
   });
 });
