@@ -5,8 +5,8 @@ export const config: WebdriverIO.Config = {
   capabilities: [
     {
       platformName: "iOS",
-      "appium:deviceName": "iPhone 14 Pro Max",
-      "appium:platformVersion": "17.0",
+      "appium:deviceName": "iPhone 15 Pro Max",
+      "appium:platformVersion": "17.5",
       "appium:automationName": "XCUITest",
     },
   ],
