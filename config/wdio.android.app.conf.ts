@@ -1,13 +1,14 @@
 import { config as baseConfig } from "./wdio.shared.conf.ts";
 
-export const config: WebdriverIO.Config = {
+export const config = {
   ...baseConfig,
   capabilities: [
     {
       platformName: "Android",
       "appium:deviceName": "Android GoogleAPI Emulator",
-      "appium:platformVersion": "12.0",
+      "appium:platformVersion": "14.0",
       "appium:automationName": "UiAutomator2",
+      "appium:disableIdLocatorAutocompletion": true,
     },
   ],
 };

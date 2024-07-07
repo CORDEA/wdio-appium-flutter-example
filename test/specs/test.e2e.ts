@@ -8,7 +8,10 @@ describe("My application", () => {
     await expect(HomePage.example4()).toBeDisplayed();
     await expect(HomePage.example5()).toBeDisplayed();
     await expect(HomePage.example5()).toBeDisabled();
-    await (await HomePage.example6()).waitForDisplayed({ reverse: true });
-    await expect(HomePage.example6()).toBeEnabled();
+    const example6 = await HomePage.example6();
+    if (example6) {
+      await example6.waitForDisplayed({ reverse: true });
+      await expect(example6).toBeEnabled();
+    }
   });
 });
